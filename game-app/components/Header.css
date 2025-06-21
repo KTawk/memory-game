@@ -1,0 +1,58 @@
+/* components/Header.css */
+
+header {
+  position: fixed;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 2rem);
+  max-width: 1200px;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  padding: 0.5rem 0;    /* reduced top/bottom padding */
+  min-height: 60px;     /* reduced overall height */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  z-index: 999;
+}
+
+
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;      /* more padding on all sides */
+}
+
+.logo {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 1.75rem;       /* smaller logo */
+  font-weight: 700;
+  color: #1e1e58;
+  transition: color 0.3s ease;
+}
+
+header.scrolled .logo {
+  color: #111827;
+}
+
+nav a {
+  margin-left: 2rem;
+  font-size: 1.35rem;         /* smaller nav links */
+  font-weight: 400;
+  color: #1e1e58;
+  text-transform: lowercase;
+  transition: color 0.3s ease;
+  
+
+}
+
+header.scrolled nav a {
+  color: #111827;
+  
+}
+
+nav a:hover {
+  color: #dba879
+;
+}

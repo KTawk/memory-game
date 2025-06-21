@@ -1,0 +1,488 @@
+* {
+    margin: 0;
+    font-family: 'Fredoka', sans-serif;
+}
+
+:root {
+    --dark-primary: #082f49;
+    --light-primary: #f0f9ff;
+    --light-secondary: rgba(255, 255, 255, 0.95);
+    --accent: #fde68a;
+    --btn-disabled: #a8a29e;
+    /* Dropdown select colors */
+    --select-bg-color: #FFFFFF;     /* dropdown background */
+    --select-text-color: #4B0082;   /* dropdown text */
+    --select-border-color: #4B0082; /* Purple */
+}
+
+
+
+/*===========================
+Layout
+============================*/
+
+/* Added */
+.score-display {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: whitesmoke;
+}
+
+.milestone-popup {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: gold;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+    z-index: 1000;
+    animation: fadeInOut 2s ease-in-out;
+}
+
+.timeout-popup {
+  margin-top: 1rem;
+  background-color: #ffe4e1; /* Light peach background */
+  padding: 1.5rem;
+  border-radius: 1rem;
+  text-align: center;
+  font-weight: 600;
+  color: #4B0082; /* Indigo text */
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  font-size: 1.25rem;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Fredoka', sans-serif;
+}
+
+.timeout-popup button {
+  margin-top: 1rem;
+  background-color: #dba879;  /* same as start game button */
+  color: white;
+  border: 2px solid #082f49;  /* dark blue border */
+  padding: 0.5em 1.5em;
+  border-radius: 0.75rem;
+  font-size: 1.25rem;
+  font-family: 'Fredoka', sans-serif;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.timeout-popup button:hover,
+.timeout-popup button:focus {
+  background-color: #b8754f;
+  color: white;
+  outline: none;
+}
+
+
+
+@keyframes fadeInOut {
+    0% { opacity: 0; transform: translateX(-50%) scale(0.9); }
+    10% { opacity: 1; transform: translateX(-50%) scale(1); }
+    90% { opacity: 1; }
+    100% { opacity: 0; transform: translateX(-50%) scale(0.9); }
+
+}
+
+
+
+/*. */
+
+body {
+    display: flex;
+    font-family: 'Fredoka', sans-serif;
+    background: indigo;
+    color: var(--light-primary);
+    text-align: center;
+    min-height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* ⬅ vertical centering */
+    margin: 0;
+    padding: 8rem; /* optional spacing */
+
+}
+
+h1, .btn, .btn--emoji {
+  font-family: 'Fredoka', sans-serif;
+}
+
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+    height: 100%;
+    min-height: 100vh;
+    padding: 2em;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    background-color: var(--light-secondary);
+    color: var(--dark-primary);
+    border-radius: .5em;
+    width: 100%;
+    max-width: 750px; /* was 600px */
+    padding: 3em 4em; /* was 2em 3em */
+    font-size: 1.25rem;
+}
+
+.score-section h2,
+.score-section p {
+  font-family: 'Fredoka', sans-serif !important;
+}
+
+.score-section {
+  font-family: 'Fredoka', sans-serif !important;
+  text-align: center;
+}
+
+.score-section {
+  font-family: 'Fredoka', sans-serif !important;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.score-section h2 {
+  margin-bottom: 0.75rem;
+   font-family: 'Fredoka', sans-serif !important;
+}
+
+.score-section p {
+  margin-bottom: 0.5rem;
+  font-family: 'Fredoka', sans-serif !important;
+    
+}
+
+.score-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem; /* controls the spacing between items */
+  font-family: 'Fredoka', sans-serif !important;
+}
+
+
+
+
+
+/*
+.wrapper--accent {
+    padding: 2em 3em;
+    border: 1px solid var(--dark-primary);
+    box-shadow: 0 0 5px 2px var(--light-primary);
+    
+}
+*/
+
+/*===========================
+Typography
+============================*/
+
+h1 {
+    /*color: var(--accent);*/
+    color: #f0d9bd;
+    font-size: 2.25rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.p--large {
+    font-size: 1.5rem;
+}
+
+.p--regular {
+    font-size: 1.2em;    
+    margin: 1rem 0;
+    text-align: center; /* Ensures it's centered */
+    
+}
+
+/*===========================
+Buttons
+============================*/
+.btn {
+    background-color: var(--light-primary);
+    color: var(--dark-primary);
+    font-family: inherit;
+    border: 2px solid var(--dark-primary);
+    border-radius: .5em;
+    cursor: pointer;
+}
+
+.btn--text {
+    background-color: #dba879;
+    color: var(--light-primary);
+    font-size: 1.5rem; /* was 1.25rem */
+    width: max-content;
+    margin: 0 auto;
+    padding: .5em 1.25em; /* was .25em .75em */
+    border-radius: 0.75rem; /* You can add this for a rounder look */
+}
+
+.btn--emoji {
+    width: 200px;
+    height: 200px;
+    font-size: 3rem;
+    border: 2px solid var(--light-primary);
+}
+
+.btn--text:hover,
+.btn--text:focus {
+    background-color: var(--light-primary);
+    color: var(--dark-primary);
+    box-shadow: 0 0 5px 1px var(--dark-primary);
+}
+
+/*===========================
+Form
+============================*/
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2em; /* was 1.5em */
+    text-align: start;
+    font-size: 1.25rem; /* added */
+    align-items: center;       
+    justify-content: center;  
+    
+    
+    
+}
+
+.form-container h1 {
+  text-align: center;
+  width: 100%;
+  font-size: 3rem; /* Larger font */
+  margin-bottom: 0.5em; /* Space below */
+}
+
+form {
+    gap: 2em;
+    font-size: 1.25rem; /* was 1.125rem */
+    padding: 1em;
+    border-radius: .5em;
+}
+
+.form__inner-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+}
+
+select {
+    background-color: var(--select-bg-color);
+    color: var(--select-text-color);
+    font-family: inherit;
+    font-size: 1.125rem; /* added */
+    padding: .75em;
+    border: 1px solid var(--select-border-color);
+    border-radius: .5em;
+    cursor: pointer;
+    /* Hide default arrow in most browsers and add custom arrow */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%234B0082" viewBox="0 0 10 6" xmlns="http://www.w3.org/2000/svg"><path d="M0 0l5 6 5-6z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 0.75em center;
+    background-size: 0.65em;
+}
+
+select:hover,
+select:focus {
+    background-color: var(--light-primary);
+    color: var(indigo);
+    box-shadow: 0 0 2px 1px indigo;
+}
+
+/*===========================
+Game
+============================*/
+
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2.5em;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2rem 0;
+    max-width: 1200px;
+  
+}
+
+
+
+.card-item {
+    list-style: none;
+}
+
+/* Animated memory card */
+.card-item--selected,
+.card-item--matched,
+.btn--emoji__back--selected,
+.btn--emoji__back--matched {
+    transform: rotateY(180deg);
+}
+
+.card-item--selected {
+    transition: .6s;
+    transform-style: preserve-3d;
+}
+
+.btn--emoji__front,
+.btn--emoji__back--selected {
+    backface-visibility: hidden;    
+}
+
+.btn--emoji__back--matched {
+    backface-visibility: unset;
+    background-color: var(--btn-disabled);
+    border: 2px solid var(--btn-disabled);
+    cursor: not-allowed;
+}
+
+.btn--emoji__front:hover,
+.btn--emoji__front:focus {
+    background-color: var(--accent);
+    border: 2px solid #dba879;
+    box-shadow: 0 0 5px 2px var(--light-primary);
+    cursor: pointer;
+}
+
+.card-item--selected .btn--emoji__back--selected {
+    border: 2px solid var(--dark-primary);
+    box-shadow: 0 0 5px 2px var(--light-primary);
+}
+
+.btn--emoji__front {
+  color: #dba879; /* Or any color you'd like for the question mark */
+}
+
+
+/*===========================
+Screen reader only
+============================*/
+.sr-only {
+	border: 0 !important;
+	clip: rect(1px, 1px, 1px, 1px) !important;
+	-webkit-clip-path: inset(50%) !important;
+		clip-path: inset(50%) !important;
+	height: 1px !important;
+	margin: -1px !important;
+	overflow: hidden !important;
+	padding: 0 !important;
+	position: absolute !important;
+	width: 1px !important;
+	white-space: nowrap !important;
+}
+
+/*===========================
+Media queries
+============================*/
+@media (min-width: 768px) {
+    h1 {
+        font-size: 2.75rem;
+    }
+
+    .btn--emoji {
+        font-size: 4rem;
+        width: 200px;
+        height: 200px;
+    }
+
+    .card-container {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 2.5em;
+    }
+}
+
+@media (min-width: 1024px) {
+    h1 {
+        font-size: 3.25rem;
+    }
+
+    .btn--emoji {
+        font-size: 4.5rem;
+        width: 200px;
+        height: 200px;
+    }
+
+    .card-container {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 2.5em;
+    }
+}
+
+.level-20 .btn--emoji,
+.level-30 .btn--emoji,
+.level-40 .btn--emoji,
+.level-50 .btn--emoji {
+  width: 125px;
+  height: 125px;
+  font-size: 2.75rem;
+}
+
+.level-20 .card-container,
+.level-30 .card-container,
+.level-40 .card-container,
+.level-50 .card-container {
+  grid-template-columns: repeat(10, 1fr);
+  gap: 1.2rem;
+  max-width: 100vw;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+/* About page */
+.about-container {
+    max-width: 750px;
+    background-color: var(--light-secondary);
+    margin: 4rem auto;
+    padding: 3rem 4rem;
+    border-radius: 1rem;
+    color: var(--dark-primary);
+    font-family: 'Fredoka', sans-serif;
+    margin: 2rem auto 4rem auto; 
+}
+
+.about-container h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+    color: var(--dark-primary);
+}
+
+.about-paragraph {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.about-paragraph a {
+    color: #4B0082;
+    text-decoration: none;
+    margin: 0 0.5rem;
+}
+
+.about-paragraph a:hover {
+    text-decoration: underline;
+}
