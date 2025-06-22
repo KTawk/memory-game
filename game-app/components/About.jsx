@@ -8,7 +8,7 @@ export default function About() {
             </p>
 
             <p className="about-paragraph">
-                This project was developed by <strong>Kairly Tawk & Suhas Chimmapudi</strong>, a software engineering students passionate about building accessible and engaging digital experiences.
+                This project was developed by <strong>Kairly Tawk & Suhas Chimmapudi</strong>, software engineering students passionate about building accessible and engaging digital experiences.
             </p>
 
             <p className="about-paragraph">
@@ -16,12 +16,12 @@ export default function About() {
             </p>
 
             <p className="about-paragraph">
-                The game is optimized for both desktop and mobile play, with accessibility and clean design as core goals.
+                The game was built with accessibility and clean design as core goals.
             </p>
 
             <p className="about-paragraph">
                 You can check out the code or reach out via: <br/>
-                <a href="https://github.com/KTawk" target="_blank" rel="noreferrer">GitHub</a> |
+                <a href="https://github.com/KTawk/memory-game.git" target="_blank" rel="noreferrer">GitHub</a> |
                 <a href="mailto:Kairly.tauk@outloook.com"> Email</a>
             </p>
         </div>
