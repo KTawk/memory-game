@@ -40,7 +40,7 @@ nav a {
   margin-left: 2rem;
   font-size: 1.35rem;         /* smaller nav links */
   font-weight: 400;
-  color: #1e1e58;
+  color: #1e1e58; 
   text-transform: lowercase;
   transition: color 0.3s ease;
   
