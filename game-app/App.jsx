@@ -9,6 +9,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import About from './components/About';
 import CustomNavbar from './components/CustomNavbar';
 import { Container } from 'react-bootstrap';
+import GothicProfileNote from './components/GothicProfileNote';
 
 export default function App() {
     const initialFormData = {category: "animals-and-nature", number: 10}
@@ -253,6 +254,7 @@ export default function App() {
             } />
             
             <Route path="/about" element={<About />} />
+            <Route path="/gothic-profile-note" element={<GothicProfileNote />} />
           </Routes>
         </Container>
       </Router>

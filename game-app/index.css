@@ -466,6 +466,7 @@ Media queries
     color: var(--dark-primary);
     font-family: 'Fredoka', sans-serif;
     margin: 2rem auto 4rem auto; 
+    
 }
 
 .about-container h1 {
@@ -473,12 +474,14 @@ Media queries
     margin-bottom: 1.5rem;
     font-size: 2.5rem;
     color: var(--dark-primary);
+    
 }
 
 .about-paragraph {
     font-size: 1.2rem;
     margin-bottom: 1.5rem;
     line-height: 1.6;
+    
 }
 
 .about-paragraph a {
@@ -489,4 +492,26 @@ Media queries
 
 .about-paragraph a:hover {
     text-decoration: underline;
+}
+
+
+.gothic-note-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 8rem;
+  min-height: 100vh;
+}
+
+.gothic-note-title {
+  color: white;
+  font-weight: bold;
+  margin-top: 2rem;
+}
+
+.gothic-note-text {
+  color: white;
+  margin-top: 1rem;
+  font-size: 1.7rem;
 }

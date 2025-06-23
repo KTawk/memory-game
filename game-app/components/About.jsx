@@ -8,7 +8,7 @@ export default function About() {
             </p>
 
             <p className="about-paragraph">
-                This project was developed by <strong>Kairly Tawk & Suhas Chimmapudi</strong>, software engineering students passionate about building accessible and engaging digital experiences.
+                This project was developed by <strong>Clara Jennings & Marcus Bennett</strong>, software engineering students passionate about building accessible and engaging digital experiences.
             </p>
 
             <p className="about-paragraph">
@@ -21,8 +21,8 @@ export default function About() {
 
             <p className="about-paragraph">
                 You can check out the code or reach out via: <br/>
-                <a href="https://github.com/KTawk/memory-game.git" target="_blank" rel="noreferrer">GitHub</a> |
-                <a href="mailto:Kairly.tauk@outloook.com"> Email</a>
+                <a href="/gothic-profile-note">GitHub</a> |
+                <a href="/gothic-profile-note">Email</a>
             </p>
         </div>
     );
